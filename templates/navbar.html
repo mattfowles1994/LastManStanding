@@ -1,0 +1,25 @@
+{% load static %}
+<nav class="navbar navbar-inverse navbar-fixed-top" id="navbar1">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href='/home/' class="navbar-brand"><span  class="far fa-image" aria-hidden="true"></span> LMS</a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul id="navbarInline" class="nav navbar-nav navbar-right"> 
+        {% if user.is_authenticated %}
+          <li><a>{{ request.user }}</a></li>
+          <li><a href='/accounts/logout'>Logout</a></li>
+        {% else %}
+          <li><a href='/accounts/login/'>Login</a></li>
+          <li><a href='/accounts/signup/'>Register</a></li>
+        {% endif %}
+        <li><a href='/admin/'>Admin</a></li>
+      </ul>
+    </div>
+  </div><!-- /.container-fluid -->
+</nav>
