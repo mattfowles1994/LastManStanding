@@ -1,0 +1,16 @@
+#login {
+    width: 35%; /* Can be in percentage also. */
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    border: 2px solid #ddd !important;
+    border-radius: 8px !important;
+    background-color: rgb(236, 240, 241, 0.6) !important;
+    min-width: 50%;
+  }
+
+body.portal {
+    padding-top: 70px;
+    background-color: bisque; 
+  }
